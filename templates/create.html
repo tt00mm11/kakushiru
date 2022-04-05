@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div align="center">
+  <h1><span id="text"></span></h1>
+  <!-- <form action="/create" method="POST"> -->
+      <div class="canvas" id="candiv"  style="border:1px solid rgb(200, 200, 200);">
+          <canvas id="can" width="900px" height="600px"></canvas>
+      </div>
+      <!-- <imput type="submit" id="data" name= "data" onClick="saveCan();" value="保存" class="save-button">保存</button> -->
+        <!-- 保存と分析分ける？ -->
+        <button id="img" name="img" value="認識" class="send-button" onClick="sendImage();">
+        認識！</button>  
+      <!-- </form> -->
+      <button type="button" onClick="clearCan();" value="クリア" class="clear-button">クリア</button>
+  <div id="answer"></div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="/static/js/sample.js"></script>
+{% endblock %}
